@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oil Rig Monitoring System - User Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rigDark: "#111827",
+            rigYellow: "#facc15",
+            rigOrange: "#f97316",
+            rigRed: "#dc2626",
+            rigGreen: "#16a34a"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-rigDark text-gray-200 min-h-screen">
+
+  <!-- HEADER -->
+  <header class="bg-black border-b border-gray-700">
+    <div class="max-w-5xl mx-auto px-6 py-6 flex justify-between items-center">
+
+      <!-- Title -->
+      <div>
+        <h1 class="text-3xl font-bold text-rigYellow">
+          Oil Rig Monitoring System
+        </h1>
+        <p class="text-gray-400 mt-2">
+          End User Guide – Raspberry Pi GPIO Control System
+        </p>
+      </div>
+
+      <!-- Back Button -->
+      <a href="/"
+         class="inline-flex items-center gap-2
+                bg-gray-800 hover:bg-rigYellow hover:text-black
+                text-gray-200 px-4 py-2 rounded-lg
+                border border-gray-600 transition font-medium">
+        ← Back to Dashboard
+      </a>
+
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-10 space-y-10">
+
+    <section>
+      <h2 class="text-2xl font-semibold text-rigOrange mb-4">System Overview</h2>
+      <p class="text-gray-300 leading-relaxed">
+        The Oil Rig Monitoring System is a Raspberry Pi-based control and monitoring platform
+        designed to collect sensor data and manage critical drilling equipment using GPIO-connected
+        hardware. The system connects to the rig network via WiFi and communicates with a central
+        operations server for data logging and remote supervision.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-rigOrange mb-4">Dashboard Overview</h2>
+      <p class="text-gray-300">Monitor sensor readings and control systems safely.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-rigOrange mb-4">Safety Thresholds</h2>
+      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <ul class="space-y-3">
+          <li><span class="text-rigGreen font-semibold">Normal:</span> Sensors OK.</li>
+          <li><span class="text-rigYellow font-semibold">Warning:</span> Monitor closely.</li>
+          <li><span class="text-rigRed font-semibold">Critical:</span> Take emergency action immediately.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-rigOrange mb-4">Operating Instructions</h2>
+      <ol class="list-decimal ml-6 space-y-3 text-gray-300">
+        <li>Verify WiFi and server are connected.</li>
+        <li>Monitor sensor readings for abnormal values.</li>
+        <li>Use control buttons only if trained and authorized.</li>
+        <li>Follow emergency procedures if critical thresholds are reached.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-rigRed mb-4">Emergency Procedure</h2>
+      <div class="bg-red-900/30 border border-rigRed p-6 rounded-xl">
+        <ul class="space-y-3">
+          <li>1. Activate Blowout Preventer.</li>
+          <li>2. Engage Emergency Alarm.</li>
+          <li>3. Shut down Mud Pump if instructed.</li>
+          <li>4. Evacuate area if unsafe conditions persist.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-rigOrange mb-4">Contact & Support</h2>
+      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 space-y-4">
+        <div>
+          <h3 class="font-semibold text-rigYellow">Rig Technical Support</h3>
+          <p class="text-gray-300">For system faults, sensor errors, or dashboard issues.</p>
+          <p class="mt-2 text-gray-400">📞 +1 (800) 555-0147<br>📧 support@oilrigsystems.com</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-rigYellow">Emergency Escalation</h3>
+          <p class="text-gray-300">Critical failures affecting safety.</p>
+          <p class="mt-2 text-rigRed font-semibold">📞 +1 (800) 555-9999</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-black border-t border-gray-700 py-4 text-center text-sm text-gray-500">
+    Oil Rig Monitoring System | End User Documentation
+  </footer>
+
+</body>
+</html>
