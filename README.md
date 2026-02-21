@@ -51,12 +51,14 @@ The project is built to be modular and easily extensible for additional sensors 
 ---
 
 ## System Architecture
-+-------------------+ +--------------------+
-| Raspberry Pi | | Operator Dashboard |
-| GPIO Sensors/Actuators <-> Flask App <-> Web Browser |
-| (Pressure, Temp, | | HTML + Tailwind CSS|
-| Gas, Control) | | JavaScript |
-+-------------------+ +--------------------+
+  +-------------------+           +----------------------+
+  |   Raspberry Pi    |           | Operator Dashboard   |
+  |------------------|           |----------------------|
+  | GPIO Sensors &   |<---> Flask App <---> Web Browser  |
+  | Actuators        |           | HTML + Tailwind CSS |
+  | (Pressure, Temp, |           | JavaScript          |
+  |  Gas, Control)   |           |                      |
+  +------------------+           +----------------------+
 
 
 **Flow:**  
