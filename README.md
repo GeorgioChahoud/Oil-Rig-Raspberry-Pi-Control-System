@@ -2,6 +2,9 @@
 
 A **Raspberry Pi-based dashboard** for monitoring and controlling oil rig sensors and systems using GPIO and WiFi. Built with **Flask**, **Tailwind CSS**, and modern web standards, this project provides real-time status, interactive controls, and user-friendly documentation.
 
+**Live Demo:** [View the Dashboard](https://pason.cohogs.com)
+
+
 <img width="1718" height="813" alt="Oil Rig Control Panel - Raspberry Pi" src="https://github.com/user-attachments/assets/530ce87a-f165-47a7-b36c-3379ee2ee559" />
 
 
