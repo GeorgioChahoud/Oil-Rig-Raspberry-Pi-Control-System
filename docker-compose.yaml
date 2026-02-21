@@ -18,4 +18,22 @@ services:
       timeout: 5s
       retries: 3
       start_period: 10s
-      
+
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"     # AMQP port
+      - "15672:15672"   # Management UI
+      - "1883:1883"     # MQTT port
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_ERLANG_COOKIE: secretcookie
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: "-rabbitmq_mqtt listener [{port,1883}]" # Enable MQTT
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "status"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
