@@ -7,7 +7,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      FLASK_APP: app.py
+      FLASK_APP: app  # points to app/app.py
       FLASK_ENV: development
     volumes:
       - .:/usr/src/app
@@ -23,14 +23,14 @@ services:
     image: rabbitmq:3.12-management
     container_name: rabbitmq
     ports:
-      - "5672:5672"     # AMQP port
-      - "15672:15672"   # Management UI
-      - "1883:1883"     # MQTT port
+      - "5672:5672"     # AMQP
+      - "15672:15672"   # management UI
+      - "1883:1883"     # MQTT
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
       RABBITMQ_ERLANG_COOKIE: secretcookie
-      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: "-rabbitmq_mqtt listener [{port,1883}]" # Enable MQTT
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: "-rabbitmq_mqtt listener [{port,1883}]"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "rabbitmq-diagnostics", "status"]
