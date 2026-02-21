@@ -4,7 +4,7 @@ FROM python:3.11-slim
 # Set working directory
 WORKDIR /usr/src/app
 
-# Copy requirements (we only need Flask for now)
+# Copy requirements (Flask)
 COPY requirements.txt ./
 
 # Install dependencies
@@ -16,5 +16,5 @@ COPY . .
 # Expose port
 EXPOSE 5000
 
-# Command to run the Flask app
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Use Python to run your app directly
+CMD ["python", "app.py"]
