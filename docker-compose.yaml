@@ -10,7 +10,8 @@ services:
       FLASK_ENV: development
     volumes:
       - .:/usr/src/app
-    command: python app.py
+    working_dir: /usr/src/app       # <-- ensure container's cwd is project root
+    command: python app.py          # <-- run app.py from root
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/ || exit 1"]
