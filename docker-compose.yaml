@@ -7,12 +7,12 @@ services:
     ports:
       - "5000:5000"
     environment:
-      FLASK_ENV: development
-    volumes:
-      - .:/usr/src/app
-    working_dir: /usr/src/app       # <-- ensure container's cwd is project root
-    command: python app.py          # <-- run app.py from root
+      FLASK_ENV: production
+    working_dir: /usr/src/app
+    command: gunicorn -w 4 -b 0.0.0.0:5000 app:app
     restart: unless-stopped
+    depends_on:
+      - rabbitmq
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/ || exit 1"]
       interval: 30s
@@ -24,9 +24,9 @@ services:
     image: rabbitmq:3.12-management
     container_name: rabbitmq
     ports:
-      - "5672:5672"     # AMQP
-      - "15672:15672"   # management UI
-      - "1883:1883"     # MQTT
+      - "5672:5672"
+      - "15672:15672"
+      - "1883:1883"
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
