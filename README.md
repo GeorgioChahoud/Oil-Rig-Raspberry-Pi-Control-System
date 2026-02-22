@@ -101,8 +101,8 @@ The project is built to be modular and easily extensible for additional sensors 
 1. **Clone the Repository**  
 
 ```bash
-git clone https://github.com/yourusername/oilrig-pi-dashboard.git
-cd oilrig-pi-dashboard
+git clone https://github.com/yourusername/oilrig-pi-dashboard.git](https://github.com/GeorgioChahoud/Oil-Rig-Raspberry-Pi-Control-System
+cd Oil-Rig-Raspberry-Pi-Control-System
 ```
 
 2.  **Install Python Dependencies
