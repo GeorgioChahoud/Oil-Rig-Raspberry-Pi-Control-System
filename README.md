@@ -105,12 +105,12 @@ git clone https://github.com/GeorgioChahoud/Oil-Rig-Raspberry-Pi-Control-System.
 cd Oil-Rig-Raspberry-Pi-Control-System
 ```
 
-2. **Install Python Dependencies
+2. **Install Python Dependencies**  
 ```bash
 pip install flask
 ```
 
-3. **Directory Structure
+3. **Directory Structure**  
 ```code
 oilrig-pi-dashboard/
 ├─ app.py                 # Flask backend
@@ -122,14 +122,14 @@ oilrig-pi-dashboard/
 └─ README.md
 ```
 
-4. **Run Flask App
+4. **Run Flask App**  
 ```bash
 export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run --host=0.0.0.0
 ```
 
-5. **Access Dashboard
+5. **Access Dashboard**  
  ```code
 http://<raspberry_pi_ip>:5000/
 ```
