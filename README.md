@@ -7,6 +7,14 @@ A **Raspberry Pi-based dashboard** for monitoring and controlling oil rig sensor
 
 <img width="1718" height="813" alt="Oil Rig Control Panel - Raspberry Pi" src="https://github.com/user-attachments/assets/530ce87a-f165-47a7-b36c-3379ee2ee559" />
 
+## Intended Audience
+
+This documentation is designed for:
+
+- System Integrators configuring hardware connections
+- Developers extending the Flask backend
+- Field Operators using the dashboard interface
+- Technical Support teams troubleshooting connectivity or device states
 
 ---
 
@@ -182,3 +190,33 @@ Accessible via **User Guide** link in the header. Includes:
 - **Project Lead**: Oil Rig Systems Team  
 - **Support**: techsupport@pason.com
 - **Emergency**: +1 (877) 255-3158
+
+## Troubleshooting
+
+### Dashboard Not Loading
+- Verify Flask server is running
+- Confirm correct IP address
+- Check firewall settings
+
+### Device Toggle Fails
+- Confirm GPIO pin mapping
+- Verify hardware power supply
+- Check WiFi connection
+
+### Sensor Displays Null Values
+- Verify sensor wiring
+- Confirm simulation mode is enabled
+
+## Release Notes
+
+### Version 1.0
+- Initial dashboard release
+- Implemented sensor monitoring (pressure, temperature, gas)
+- Added device toggle API endpoints
+- Embedded User Guide
+- Implemented safety confirmation prompts
+
+### Planned Improvements
+- Authentication layer
+- Role-based access control
+- Real hardware GPIO validation testing
